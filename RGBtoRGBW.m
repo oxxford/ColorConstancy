@@ -38,14 +38,14 @@ RGBW=RGBs*transform;
 % Above Transform may Push White Patch RGB>255, Need to Normalize so
 % Maximum RGB (White Patch) =255,255,255
 % 19 is Index of White Patch
-% R_W=RGBW(19,1);
-% G_W=RGBW(19,2);
-% B_W=RGBW(19,3);
+R_W=RGBW(19,1);
+G_W=RGBW(19,2);
+B_W=RGBW(19,3);
 
 % alternative: use the maximum value of each attribute
-R_W=max(RGBW(:,1));
-G_W=max(RGBW(:,2));
-B_W=max(RGBW(:,3));
+% R_W=max(RGBW(:,1));
+% G_W=max(RGBW(:,2));
+% B_W=max(RGBW(:,3));
 transform_norm=[255/R_W, 0, 0;
                 0, 255/G_W, 0;
                 0, 0, 255/B_W];
